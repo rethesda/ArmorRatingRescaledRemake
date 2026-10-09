@@ -75,6 +75,7 @@ namespace
 
 namespace Hooks
 {
+#pragma optimize("", off)
 	// this is the original algorithm from underthesky (Armor Rating Rescaled LE)
 	// vanillaResist = VisibleArmorValue/100.0 * fArmorScalingFactor (default 0.12)
 	// hiddenResist = count_worn(helmet armor boots gauntlets shield) * fArmorBaseFactor (default 0.03)
@@ -94,6 +95,7 @@ namespace Hooks
 
 		return armorRating;
 	}
+#pragma optimize("", on)
 
 
 	void Install()
